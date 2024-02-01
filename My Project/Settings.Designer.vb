@@ -69,12 +69,48 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property Enabled() As Boolean
+        Public Property SayTime() As Boolean
             Get
-                Return CType(Me("Enabled"),Boolean)
+                Return CType(Me("SayTime"),Boolean)
             End Get
             Set
-                Me("Enabled") = value
+                Me("SayTime") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property SayVPN() As Boolean
+            Get
+                Return CType(Me("SayVPN"),Boolean)
+            End Get
+            Set
+                Me("SayVPN") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("15")>  _
+        Public Property TimeEvery() As String
+            Get
+                Return CType(Me("TimeEvery"),String)
+            End Get
+            Set
+                Me("TimeEvery") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property VPNEvery() As String
+            Get
+                Return CType(Me("VPNEvery"),String)
+            End Get
+            Set
+                Me("VPNEvery") = value
             End Set
         End Property
     End Class
