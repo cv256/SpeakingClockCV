@@ -1,19 +1,19 @@
 ﻿Imports System.Net.NetworkInformation
-Imports System.Security.Cryptography
+
 
 Public Class Form1
 
-    Private s As System.Speech.Synthesis.SpeechSynthesizer
+    Private s As Speech.Synthesis.SpeechSynthesizer
     Private Timer1 As New Windows.Forms.Timer()
     Private TimeLastTime As Date
-    Private VPNLastTime As Date
+    Private VPNLastTime As Date, VPNLastText As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Timer1.Interval = 30500
         Timer1.Enabled = True
         AddHandler Timer1.Tick, AddressOf Timer1_Tick
 
-        s = New System.Speech.Synthesis.SpeechSynthesizer
+        s = New Speech.Synthesis.SpeechSynthesizer
         For Each a As Speech.Synthesis.InstalledVoice In s.GetInstalledVoices()
             'If not a.SayTime Then Continue for
             ComboBox1.Items.Add(a.VoiceInfo.Description)
@@ -50,6 +50,7 @@ Public Class Form1
     End Sub
 
     Private Function SayTime() As Boolean
+        If Not SetVoice() Then Return False
         Dim what As String = ""
         With Now
             If s.Voice.Culture.Name.StartsWith("pt") Then
@@ -62,7 +63,6 @@ Public Class Form1
                 End If
             End If
         End With
-        If Not SetVoice() Then Return False
         s.SpeakAsync(what)
         lbError.Text = what
         Return True
@@ -82,6 +82,12 @@ Public Class Form1
             s.SpeakAsync(what)
             lbError.Text = what
         End If
+
+        If VPNLastText <> what Then
+            VPNLastText = what
+            txtLog.Text = Now.ToString("ddd d MMM HH:mm") & "     " & If(what = "", "(no VPN connected)", what.Replace(",", "")) & vbCrLf & txtLog.Text
+        End If
+
         Return True
     End Function
 

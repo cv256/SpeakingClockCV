@@ -40,6 +40,7 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtVPNEvery = New System.Windows.Forms.MaskedTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtLog = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -223,11 +224,28 @@ Partial Class Form1
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "every"
         '
+        'txtLog
+        '
+        Me.txtLog.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtLog.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLog.Location = New System.Drawing.Point(0, 101)
+        Me.txtLog.Multiline = True
+        Me.txtLog.Name = "txtLog"
+        Me.txtLog.ReadOnly = True
+        Me.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtLog.ShortcutsEnabled = False
+        Me.txtLog.Size = New System.Drawing.Size(506, 158)
+        Me.txtLog.TabIndex = 19
+        Me.txtLog.WordWrap = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(506, 99)
+        Me.ClientSize = New System.Drawing.Size(506, 259)
+        Me.Controls.Add(Me.txtLog)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtVPNEvery)
         Me.Controls.Add(Me.Label7)
@@ -272,4 +290,5 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents txtVPNEvery As MaskedTextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents txtLog As TextBox
 End Class
