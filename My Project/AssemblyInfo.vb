@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("SpeakingClockCV")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("Say the time and VPN status")>
+<Assembly: AssemblyCompany("Claudio Almeida Vidal")>
 <Assembly: AssemblyProduct("SpeakingClockCV")>
-<Assembly: AssemblyCopyright("Copyright ©  2016")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyCopyright("Copyright ©  2025")>
+<Assembly: AssemblyTrademark("SpeakingClockCV")>
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.0.1.0")>
+<Assembly: AssemblyFileVersion("1.0.1.0")>

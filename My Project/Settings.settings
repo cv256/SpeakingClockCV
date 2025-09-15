@@ -6,16 +6,16 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="SayTime" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="SayVPN" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="TimeEvery" Type="System.String" Scope="User">
       <Value Profile="(Default)">15</Value>
     </Setting>
     <Setting Name="VPNEvery" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1</Value>
+      <Value Profile="(Default)">3</Value>
     </Setting>
   </Settings>
 </SettingsFile>

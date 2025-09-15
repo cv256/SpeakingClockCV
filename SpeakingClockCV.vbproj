@@ -50,6 +50,9 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>speech_talk_user_icon-icons.com_49868 opaque.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -126,8 +129,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="megaphone_notification_announcement_ad_advertisement_icon_124641.ico" />
     <Content Include="ReadMe.png" />
     <Content Include="ReadMe.txt" />
+    <Content Include="speech_talk_user_icon-icons.com_49868 opaque.ico" />
+    <Content Include="warning_alert_notification_icon_197140.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
